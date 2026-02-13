@@ -1,0 +1,25 @@
+[project]
+name = "pixel_perfect_depth"
+version = "0.1"
+description = "Inference/Model for Pixel Perfect Depth monocular depth estimation."
+readme = "README.md"
+dependencies = [
+    "torch",
+    "torchvision",
+    "timm",
+    "opencv-python",
+    "Pillow",
+    "matplotlib",
+    "numpy",
+    "open3d",
+    "scikit-learn",
+    "utils3d @ git+https://github.com/EasternJournalist/utils3d.git@c5daf6f6c244d251f252102d09e9b7bcef791a38",
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ppd*"]
